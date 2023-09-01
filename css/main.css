@@ -8,6 +8,7 @@
   --light-color: #fff;
   --text-main: #000;
   --main-color: #0024ff;
+  --grey-color: #f6f7f8;
 }
 
 /* stylelint-disable */
@@ -229,12 +230,21 @@ a {
 }
 
 .main-title {
+  margin-top: 0;
+  margin-bottom: 24px;
   font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 44px;
-  line-height: 50px;
-  text-align: center;
-  color: #fff;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
+  color: #161824;
+}
+
+.main-link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #0024ff;
 }
 
 .header {
@@ -301,6 +311,12 @@ a {
 .hero__title {
   margin: 0;
   padding: 0 110px 24px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
 }
 .hero__sub-title {
   margin: 0;
@@ -378,6 +394,34 @@ a {
   height: 100%;
 }
 
+.cases {
+  margin-bottom: 80px;
+}
+.cases__list {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.cases__item .card {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+  max-width: 310px;
+}
+.cases__item:not(:last-child) {
+  margin-right: 36px;
+}
+
 .testimonials {
   margin-bottom: 80px;
 }
@@ -393,13 +437,6 @@ a {
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
-.testimonials__title {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 49px;
-  color: #161824;
-}
 .testimonials__item {
   -ms-flex-preferred-size: 432px;
   flex-basis: 432px;
@@ -408,9 +445,39 @@ a {
   padding: 30px 42px 122px 30px;
 }
 
-.services__container {
-  background-color: #fff;
+.our-team {
+  margin-bottom: 80px;
 }
+.our-team .card {
+  padding: 0;
+  background-color: var(--grey-color);
+}
+.our-team .card__image {
+  height: auto;
+}
+.our-team__link {
+  margin-bottom: 24px;
+}
+.our-team__item:not(:last-child) {
+  margin-right: 36px;
+}
+.our-team__list {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.our-team .card__content {
+  padding-left: 0;
+  padding-right: 0;
+}
+.our-team .card__descr {
+  margin: 0;
+  font-family: var(--second-family);
+  line-height: 31.98px;
+  color: #393939;
+}
+
 .services__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,6 +487,7 @@ a {
   justify-content: space-between;
   padding: 20px 182px;
   gap: 100px;
+  background-color: #fff;
 }
 .services__item {
   display: -webkit-box;
@@ -457,6 +525,46 @@ a {
   fill: #0024ff;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  width: 40%;
+}
+
+.swiper-slide:nth-child(2n) {
+  width: 40%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 40%;
+}
+
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -491,6 +599,25 @@ a {
 .card {
   padding: 65px 44px 65px 30px;
   background-color: #fff;
+}
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 20px 24px 24px 12px;
+}
+.card__content .card__descr {
+  line-height: 28px;
 }
 .card__title {
   position: relative;
@@ -530,5 +657,15 @@ a {
 }
 .card.testimonials__item:not(:last-child) {
   margin-right: 36px;
+}
+.card__image {
+  min-width: 310px;
+  height: 200px;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 /*# sourceMappingURL=main.css.map */
