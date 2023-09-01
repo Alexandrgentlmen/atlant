@@ -669,25 +669,25 @@ a {
   background-position: left center;
   background-size: 33px 33px;
   background-repeat: no-repeat;
-  background-image: url("../../img/svg/time.svg");
+  background-image: url("./../img/svg/time.svg");
 }
 .icon--email {
   background-position: left center;
   background-size: 33px 33px;
   background-repeat: no-repeat;
-  background-image: url("../../img/svg/Mail.svg");
+  background-image: url("./../img/svg/Mail.svg");
 }
 .icon--tel {
   background-position: left center;
   background-size: 33px 33px;
   background-repeat: no-repeat;
-  background-image: url("../../img/svg/Phone.svg");
+  background-image: url("./../img/svg/Phone.svg");
 }
 .icon--address {
   background-position: left center;
   background-size: 33px 33px;
   background-repeat: no-repeat;
-  background-image: url("../../img/svg/Location.svg");
+  background-image: url("./../img/svg/Location.svg");
 }
 
 .nav__list {
